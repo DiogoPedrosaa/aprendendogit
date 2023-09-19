@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> logica de programação com javascript </title>
+        <meta charset="utf-8">
+   
+    </head>
+    <body>
+        <h1> aula de javascript </h1>
+        <div id ="output"></div>
+<script>
+    var output = document.querySelector('#output');
+
+    //Sintaxe formal
+
+    var obj = new Object();
+    obj.nome = "Meu Objeto";
+    obj.funcao = function(){
+        console.log('Eu sou um metodo');
+    }
+
+    console.log(obj.nome);
+    obj.funcao();
+
+
+    //Sintaxe Literal
+
+    var obj2 = {
+        nome: "Meu objeto 2",
+        funcao: function(){
+            console.log('Eu sou um metodo do obj 2')
+        }
+
+    }
+
+    console.log(obj2.nome);
+    obj2.funcao();
+
+
+    function Endereco (log, n, cep, perigo){
+        this.logradouro = log;
+        this.n = n;
+        this.cep = cep;
+        this.perigo = perigo;
+
+        this.enderecoCompleto = function(){
+            return this.logradouro + ', ' + this.n;
+        }
+    }
+
+    var endereco1 = new Endereco("Rua sao Pedro", "92", "666", "Alto");
+    var endereco2 = new Endereco("Rua guanabara", "100", "333", "Baixo");
+
+    console.log(endereco1.enderecoCompleto());
+
+</script>
+
+    </body>
+</html>

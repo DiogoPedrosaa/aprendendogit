@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> logica de programação com javascript </title>
+        <meta charset="utf-8">
+   
+    </head>
+    <body>
+        <h1> aula de javascript </h1>
+        <div id ="output"></div>
+<script>
+    var output = document.querySelector('#output');
+
+    var produto = new Object();
+
+    produto.nome = "Biscoito";
+    produto.quantia = 300;
+    produto.preco = 3;
+    
+    produto.comprar = function(qtd){
+        if(!qtd){
+            qtd = 1;
+        }
+        console.log('comprou biscoito');
+
+        this.quantia -= qtd;
+        console.log(this.quantia);
+    }
+
+    var msg = '';
+
+    msg += 'Nome: ' + produto.nome + '<br>';
+    msg += 'Quantia em estoque: ' + produto.quantia + '<br>';
+    msg += 'Preço: ' + produto.preco + '<br>';
+
+
+    output.innerHTML = msg;
+
+
+</script>
+
+
+    </body>
+</html>

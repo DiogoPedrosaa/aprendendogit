@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>logica de programação com javascript</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h1>aula de javascript</h1>
+
+    <button onclick="iniciarCalculo('+')">+</button>
+    <button onclick="iniciarCalculo('-')">-</button>
+    <button onclick="iniciarCalculo('*')">*</button>
+    <button onclick="iniciarCalculo('/')">/</button>
+    <button onclick="limparNan()">Clique aqui em caso de NaN</button>
+    <div id="output"></div>
+
+    <script>
+        var n1 = prompt("Digite um numero");
+        n1 = parseFloat(n1);
+        
+        escreve(n1);
+
+        function limparNan(n1){
+        var n1 = prompt("Digite um numero");
+        n1 = parseFloat(n1);
+        
+        escreve(n1);
+        }
+
+        function iniciarCalculo(simbolo) {
+            var n2 = prompt("Digite outro numero");
+            n2 = parseFloat(n2);
+
+            var mensagem = calcular(simbolo, n1, n2); // basicamenta mensagem tá recebendo o valor de numeroCalculado já que é o que a funcão calcular retorna o mesmo.
+                                                        
+            escreve(mensagem);
+
+            n1 = mensagem; // Atualiza o valor de n1 para a próxima operação
+        }
+
+        function escreve(msg) { //basicamente serve como um output, para evitar ficar repetindo o codigo, a função tem como parametro a var msg, no fim ela dá um output no html referente a variavel, mas se ela for chamada no codigo como n1 por exemplo, basicamente a variavel var vai se tornar n1 e retornar o msm.
+            var output = document.querySelector('#output');
+            output.innerHTML = msg;
+        }
+
+        function calcular(simbolo, n1, n2) {
+            var numeroCalculado = null;
+
+            switch (simbolo) {
+                case '+':
+                    numeroCalculado = n1 + n2;
+                    break;
+
+                case '-':
+                    numeroCalculado = n1 - n2;
+                    break;
+
+                case '*':
+                    numeroCalculado = n1 * n2;
+                    break;
+
+                case '/':
+                    if (n2 !== 0) {
+                        numeroCalculado = n1 / n2;
+                    } else {
+                        numeroCalculado = "Erro: Divisão por zero.";
+                    }
+                    break;
+            }
+
+            return numeroCalculado;
+        }
+    </script>
+</body>
+</html>
+
+

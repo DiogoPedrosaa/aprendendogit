@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> logica de programação com javascript </title>
+        <meta charset="utf-8">
+   
+    </head>
+    <body>
+        <h1> aula de javascript </h1>
+        <div id ="output"></div>
+<script>
+    var output = document.querySelector('#output');
+
+    msg = '';
+
+
+    var notas = [
+        [5,6,4,3], [2,8,5,6], [3,6,4,8], [2,8,4,9]
+    ];
+
+    mediaAnual = (notas[0][0,1,2,3] + notas[1][0,1,2,3] + notas[2][0,1,2,3] + notas[3][0,1,2,3]) / 4;
+    media1 = notas[0][0,1,2,3] / 4;
+    media2 = notas[1][0,1,2,3] / 4;
+    media3 = notas[2][0,1,2,3] / 4;
+    media4 = notas[3][0,1,2,3] / 4;
+
+    output.innerHTML =
+     'Notas Primeiro bimestre: ' + notas[0] + '<br>' + '<p>' + 
+     'Notas Segundo bimestre: ' + notas[1] + '<br>' + '<p>' +
+     'Notas Terceiro bimestre: ' + notas[2] + '<br>' + '<p>' +
+     'Notas Quarto bimestre: ' + notas[3] + '<br>' + '<p>' +
+     ' Media bimestre 1: ' + media1 + '<br>' + '<p>' +
+     ' Media bimestre 2: ' + media2 + '<br>' + '<p>' +
+     ' Media bimestre 3: ' + media3 + '<br>' + '<p>' +
+     ' Media bimestre 4: ' + media4 + '<br>' + '<p>' + 
+     ' Media Anual: ' + mediaAnual + '<br>';
+</script>
+
+    </body>
+</html>

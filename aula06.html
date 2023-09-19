@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> logica de programação com javascript </title>
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+        <h1> aula de javascript </h1>
+<script>
+
+    var p1 = prompt("Jogador 1, digite um numero.");
+    p1 = parseInt(p1);
+
+    var p2 = prompt("Jogador 2, digite seu numero.");
+    p2 = parseInt(p2);
+
+    alert("Numero do jogador 1: " + p1 + " Numero do jogador 2: " + p2);
+
+    if (p1 == p2){
+        alert("Empate.")
+    }else{
+        sort = parseInt( Math.random() * 2 );
+        alert("Numero sorteado: " + sort + " Se o numero sorteado for 0 ganha quem escolheu o MENOR, caso o numero sorteado seja 1, ganha quem escolheu o MAIOR.");
+    }
+
+    if(sort === 0 && p1 < p2 || sort === 1 && p1 > p2){
+        alert("Ganhou o jogador 1!");
+    }else{
+        alert("Ganhou o jogador 2!");
+    }
+
+
+
+</script>
+
+    </body>
+</html>

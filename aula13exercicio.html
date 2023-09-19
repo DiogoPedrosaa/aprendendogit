@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> logica de programação com javascript </title>
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+        <h1> aula de javascript </h1>
+        <div id="output"></div>
+<script>
+    var output = document.querySelector('#output');
+
+
+
+    var dias = new Array('Domingo', 'Segunda-Feira', 'Terça-Feira', 'Quarta-Feira', 'Quinta-Feira', 'Sexta-Feira', 'Sabado');
+
+    var hoje = new Date();
+
+    var diaSemana = hoje.getDay();
+
+    output.innerHTML = ('Bem vindo hoje é: ' + dias[diaSemana]);
+
+
+</script>
+
+    </body>
+</html>

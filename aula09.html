@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> logica de programação com javascript </title>
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+        <h1> aula de javascript </h1>
+
+        <button onclick="mostrarTabuada()">Gerar Tabuada</button>
+
+        <button onclick="limparTabuada()">Limpar Tabuada</button>
+
+        <div id = "output"></div>
+
+<script>
+    function mostrarTabuada(){
+
+        var n1 = prompt("Digite o Numero da tabuada");
+
+        limparTabuada();
+
+        n1 = parseFloat(n1);
+
+        var i = 1;
+
+        var msg = 0;
+
+        while(i <= 1000){
+
+        msg = msg + n1 + ' x ' + i + ' = ' + (n1 * i) + ' <br> ';
+
+        i++;
+
+        }
+
+        output.innerHTML = msg;
+
+    }
+
+    function limparTabuada(){
+        msg = '';
+        output.innerHTML = msg;
+    }
+</script>
+
+    </body>
+</html>

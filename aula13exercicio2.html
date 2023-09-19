@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> logica de programação com javascript </title>
+        <meta charset="utf-8">
+   
+    </head>
+    <body>
+        <h1> aula de javascript </h1>
+        <div id ="output"></div>
+<script>
+    var output = document.querySelector('#output');
+
+    var arr = new Array(1, 2, 3, 5, 2);
+
+    somaPares(arr);
+
+    function somaPares(arr){
+
+    var soma = 0;
+
+    for(var i = 0; i < arr.length; i++){
+        if(arr[i] % 2 === 0){
+        soma += arr[i];
+        }else{
+            soma = soma;
+        }
+    }
+    alert('Esses são os numeros da array: ' + arr);
+    output.innerHTML = ('a soma de todos os numeros pares da array é: ' + soma);
+
+    }
+
+
+</script>
+
+    </body>
+</html>

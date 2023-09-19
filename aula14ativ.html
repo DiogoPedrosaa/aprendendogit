@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> logica de programação com javascript </title>
+        <meta charset="utf-8">
+   
+    </head>
+    <body>
+        <h1> aula de javascript </h1>
+        <div id ="output"></div>
+<script>
+    var output = document.querySelector('#output')
+
+    msg = "";
+
+    var user = new Object();
+    user.nome = 'derek';
+    user.email = 'derekttf@gmail.com';
+
+    var user1 = new Object();
+    user1.nome = 'picapau';
+    user1.email = 'picapauauaua@gmail.com';
+
+    var user2 = new Object();
+    user2.nome = 'slova';
+    user2.email = 'slova12conto@gmail.com';
+
+    var users = new Array(user, user1, user2);
+
+    var x = 0;
+
+    while(users[x]){
+        msg += ' Nome: ' +  users[x].nome + '<br>' + ' Email: ' + users[x].email + '<br>' + '<p>';
+        x++;
+    }
+
+    output.innerHTML = msg;
+</script>
+
+    </body>
+</html>
